@@ -1,11 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function About(props) {
-  const [count, setCount] = useState(0);
-
-  function handleChange() {
-    setCount((prev) => prev + 1);
-  }
 
   // const myStyle = {
   //   backgroundColor: props.mode === "dark" ? "#253744" : "white",
@@ -19,7 +14,7 @@ export default function About(props) {
       >
         <h1 className="py-4">About</h1>
         <div className="accordion" id="accordionExample">
-          {[1, 2, 3].map((item) => (
+          {[1, 2, 3, 4].map((item) => (
             <div className="accordion-item" key={item}>
               <h2 className="accordion-header">
                 <button
@@ -48,11 +43,6 @@ export default function About(props) {
             </div>
           ))}
         </div>
-
-        <h1>{count}</h1>
-        <button className="btn btn-success my-3" onClick={handleChange}>
-          Increase
-        </button>
       </div>
     </>
   );

@@ -22,7 +22,10 @@ export default function TextForm(props) {
     setText(e.target.value);
   };
 
-  const wordCount = text.trim().split(/\s+/).filter(word => word.length !== 0).length;
+  const wordCount = text
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length !== 0).length;
 
   return (
     <>
@@ -39,8 +42,8 @@ export default function TextForm(props) {
               color: props.mode === "light" ? "#253744" : "white",
             }}
             onChange={onChanged}
+            placeholder={props.heading}
           ></textarea>
-          <label htmlFor="floatingTextarea2">{props.heading}</label>
         </div>
         <div>
           <button
@@ -68,10 +71,16 @@ export default function TextForm(props) {
       </div>
       <div className="container mt-4">
         <h1>Your text summary</h1>
-        <p>{wordCount} words and {text.length} characters</p>
+        <p>
+          {wordCount} words and {text.length} characters
+        </p>
         <h2>Preview</h2>
         <div className="border border-dark px-3 py-2">
-          <pre>{text.length > 0 ? text : "Enter something above to preview it here!"}</pre>
+          <pre>
+            {text.length > 0
+              ? text
+              : "Nothing to preview"}
+          </pre>
         </div>
       </div>
     </>

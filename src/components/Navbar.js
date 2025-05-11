@@ -32,6 +32,11 @@ export default function Navbar(props) {
                 About
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/counting">
+                Click Counting
+              </Link>
+            </li>
           </ul>
 
           <div className="form-check form-switch">

@@ -4,6 +4,7 @@ import TextForm from "./components/TextForm";
 import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
+import Counting from "./components/Counting";
 import { 
   BrowserRouter as Router,
   Routes,
@@ -46,6 +47,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<TextForm heading="Enter the text to write" mode={mode} showAlert={showAlert} />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/counting" element={<Counting />} />
         </Routes>
       </div>
     </Router>

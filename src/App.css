@@ -1,0 +1,10 @@
+.counting-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+}
+.counting-section > h1,
+.counting-section > div {
+  text-align: center;
+}
